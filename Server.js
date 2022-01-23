@@ -4,6 +4,7 @@ const app = express();
 const port = 3001;
 const userRouters = require("./app/routes/user");
 const itemRouters = require("./app/routes/item");
+const uploadRouters = require("./app/routes/upload");
 const bodyParser = require("body-parser");
 
 
@@ -23,6 +24,8 @@ app.use(
 app.use(userRouters);
 
 app.use(itemRouters);
+
+app.use(uploadRouters);
 
 app.listen(port, () => {
   console.log("La aplicacion esta en linea");
